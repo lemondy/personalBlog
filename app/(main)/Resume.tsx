@@ -6,8 +6,8 @@ import eightNinthsLogo from '~/assets/company/8ninths.jpeg'
 import abletiveLogo from '~/assets/company/abletive.png'
 import vvsLogo from '~/assets/company/vvs.png'
 import zolplayLogo from '~/assets/company/zolplay.png'
-import tieba from '~/assets/tieba.png'
-import baidu from '~/assets/baidu.png'
+import tieba from '~/assets/company/tieba.png'
+import baidu from '~/assets/company/baidu.png'
 
 type Resume = {
   company: string
