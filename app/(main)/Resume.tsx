@@ -2,12 +2,12 @@ import Image, { type StaticImageData } from 'next/image'
 import React from 'react'
 
 import { BriefcaseIcon } from '~/assets'
-// import eightNinthsLogo from '~/assets/company/8ninths.jpeg'
-// import abletiveLogo from '~/assets/company/abletive.png'
+
 import baidu from '~/assets/company/baidu.png'
+import bytedance from '~/assets/company/bytedance.png'
 import tieba from '~/assets/company/tieba.png'
-import vvsLogo from '~/assets/company/vvs.png'
-import zolplayLogo from '~/assets/company/zolplay.png'
+import yuewen from '~/assets/company/yuewen.png'
+
 
 type Resume = {
   company: string
@@ -18,20 +18,20 @@ type Resume = {
 }
 const resume: Resume[] = [
   {
-    company: '深圳市佐玩信息技术有限公司',
-    title: '创始人 CEO',
-    logo: zolplayLogo,
-    start: '2021',
+    company: '阅文集团',
+    title: '用户画像资深算法策略工程师',
+    logo: yuewen,
+    start: '2020',
     end: {
       label: '至今',
       dateTime: new Date().getFullYear(),
     },
   },
   {
-    company: 'very very spaceship',
-    title: '软件工程师',
-    logo: vvsLogo,
-    start: '2018',
+    company: 'Bytedance',
+    title: '资深数据挖掘工程师',
+    logo: bytedance,
+    start: '2019',
     end: '2020',
   },
   {
