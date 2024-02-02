@@ -80,7 +80,7 @@ export function Headline() {
         }}
       >
         <Balancer>
-          我是 Lemondy，欢迎关注。
+          我是 lemondy，欢迎关注。
         </Balancer>
       </motion.p>
       <motion.div
