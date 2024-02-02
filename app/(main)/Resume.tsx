@@ -2,7 +2,6 @@ import Image, { type StaticImageData } from 'next/image'
 import React from 'react'
 
 import { BriefcaseIcon } from '~/assets'
-
 import baidu from '~/assets/company/baidu.png'
 import bytedance from '~/assets/company/bytedance.png'
 import tieba from '~/assets/company/tieba.png'
