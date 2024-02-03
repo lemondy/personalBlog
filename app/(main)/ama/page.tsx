@@ -107,7 +107,7 @@ export default function AskMeAnythingPage() {
           来跟我预约一个合适你的时间。
         </p>
 
-        <h2>感谢信</h2>
+        {/* <h2>感谢信</h2>
         <p>
           下面两个截图摘选自两名 Twitter
           朋友的私信，能够帮助到更多的人一直是我的使命：
@@ -123,7 +123,7 @@ export default function AskMeAnythingPage() {
             alt=""
             className="max-w-full"
           />
-        </p>
+        </p> */}
       </article>
     </Container>
   )
