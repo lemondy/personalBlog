@@ -1,13 +1,14 @@
 import { z } from 'zod'
-
 /**
  * Specify server-side environment variables schema here.
  */
 const server = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']),
   DATABASE_HOST: z.string().min(1),
+  DATABASE_PORT: z.string().min(1),
   DATABASE_USERNAME: z.string().min(1),
   DATABASE_PASSWORD: z.string().min(1),
+  DATABASE_NAME: z.string().min(1),
   RESEND_API_KEY: z.string().min(1),
   VERCEL_ENV: z.enum(['development', 'preview', 'production']),
   UPSTASH_REDIS_REST_URL: z.string().min(1),
@@ -31,8 +32,10 @@ const client = z.object({
 const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
   DATABASE_HOST: process.env.DATABASE_HOST,
+  DATABASE_PORT: process.env.DATABASE_PORT,
   DATABASE_USERNAME: process.env.DATABASE_USERNAME,
   DATABASE_PASSWORD: process.env.DATABASE_PASSWORD,
+  DATABASE_NAME: process.env.DATABASE_NAME,
   RESEND_API_KEY: process.env.RESEND_API_KEY,
   VERCEL_ENV: process.env.VERCEL_ENV,
   UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
@@ -48,6 +51,7 @@ const processEnv = {
 // --------------------------
 
 const merged = server.merge(client)
+console.warn('merged:', merged)
 
 /** @typedef {z.input<typeof merged>} MergedInput */
 /** @typedef {z.infer<typeof merged>} MergedOutput */
@@ -57,6 +61,7 @@ let env = /** @type {MergedOutput} */ (process.env)
 
 if (!!process.env.SKIP_ENV_VALIDATION == false) {
   const isServer = typeof window === 'undefined'
+  console.error('current window:', typeof window, "isServer:", isServer)
 
   const parsed = /** @type {MergedSafeParseReturn} */ (
     isServer
@@ -65,10 +70,12 @@ if (!!process.env.SKIP_ENV_VALIDATION == false) {
   )
 
   if (parsed.success === false) {
+    console.error("processEnv:", processEnv)
     console.error(
       '❌ Invalid environment variables:',
       parsed.error.flatten().fieldErrors
     )
+    console.error("safe parse error:", parsed.error)
     throw new Error('Invalid environment variables')
   }
 
