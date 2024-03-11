@@ -3,6 +3,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
 import { emailConfig } from '~/config/email'
+import { eq } from 'drizzle-orm'
 import { db } from '~/db'
 import { type GuestbookDto, GuestbookHashids } from '~/db/dto/guestbook.dto'
 import { fetchGuestbookMessages } from '~/db/queries/guestbook'
@@ -77,13 +78,15 @@ export async function POST(req: NextRequest) {
         }),
       })
     }
+    // mysql not returning insertId
+    await db.insert(guestbook).values(guestbookData)
 
-    const { insertId } = await db.insert(guestbook).values(guestbookData)
+    const insertedUser = await db.select().from(guestbook).where(eq(guestbook.userId,user.id)).limit(1).execute()
 
     return NextResponse.json(
       {
         ...guestbookData,
-        id: GuestbookHashids.encode(insertId),
+        id: GuestbookHashids.encode({insertId}),
         createdAt: new Date(),
       } satisfies GuestbookDto,
       {
