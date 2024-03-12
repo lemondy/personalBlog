@@ -79,14 +79,13 @@ export async function POST(req: NextRequest) {
       })
     }
     // mysql not returning insertId
-    await db.insert(guestbook).values(guestbookData)
-
-    const insertedUser = await db.select().from(guestbook).where(eq(guestbook.userId,user.id)).limit(1).execute()
-
+    await db.insert(guestbook).values(guestbookData).execute();
+    const insertedUser = await db.select().from(guestbook).where(eq(guestbook.userId, user.id));
+    const insertId = insertedUser[0].id;
     return NextResponse.json(
       {
         ...guestbookData,
-        id: GuestbookHashids.encode({insertId}),
+        id: GuestbookHashids.encode(insertId),
         createdAt: new Date(),
       } satisfies GuestbookDto,
       {
