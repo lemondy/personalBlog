@@ -1,9 +1,9 @@
 import { currentUser } from '@clerk/nextjs'
+import { eq } from 'drizzle-orm'
 import { type NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
 import { emailConfig } from '~/config/email'
-import { eq } from 'drizzle-orm'
 import { db } from '~/db'
 import { type GuestbookDto, GuestbookHashids } from '~/db/dto/guestbook.dto'
 import { fetchGuestbookMessages } from '~/db/queries/guestbook'
