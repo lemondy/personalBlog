@@ -160,8 +160,10 @@ export async function POST(req: NextRequest, { params }: Params) {
       }
     }
 
-    const { insertId } = await db.insert(comments).values(commentData)
-
+    // const { insertId } = await db.insert(comments).values(commentData)
+    await db.insert(comments).values(commentData).execute();
+    const insertedUser = await db.select().from(comments).where(eq(comments.userId, user.id));
+    const insertId = insertedUser[0].id;
     return NextResponse.json({
       ...commentData,
       id: CommentHashids.encode(insertId),
