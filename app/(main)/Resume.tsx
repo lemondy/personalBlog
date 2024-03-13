@@ -1,4 +1,4 @@
-import Image, { type StaticImageData } from 'next/image'
+import Image from 'next/image'
 import React from 'react'
 
 import { BriefcaseIcon } from '~/assets'
@@ -76,6 +76,8 @@ export function Resume() {
                 src={role.logo}
                 alt={role.company}
                 className="h-8 w-8 rounded-full"
+                width={100}
+                height={100}
                 unoptimized
               />
             </div>
@@ -89,19 +91,9 @@ export function Resume() {
                 {role.title}
               </dd>
               <dt className="sr-only">日期</dt>
-              <dd
-                className="ml-auto text-xs text-zinc-500/80 dark:text-zinc-400/80"
-                aria-label={`${getRoleDate(role.start)} 到 ${getRoleDate(
-                  role.end
-                )}`}
-              >
-                <time dateTime={getRoleDate(role.start, false)}>
-                  {getRoleDate(role.start)}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={getRoleDate(role.end, false)}>
-                  {getRoleDate(role.end)}
-                </time>
+              <dd className="ml-auto text-xs text-zinc-500/80 dark:text-zinc-400/80">
+                {role.start}
+                <span aria-hidden="true">—</span> {role.end ?? '至今'}
               </dd>
             </dl>
           </li>

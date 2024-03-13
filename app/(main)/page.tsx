@@ -7,8 +7,11 @@ import { Newsletter } from '~/app/(main)/Newsletter'
 import { Resume } from '~/app/(main)/Resume'
 import { PencilSwooshIcon } from '~/assets'
 import { Container } from '~/components/ui/Container'
+import { getSettings } from '~/sanity/queries'
 
-export default function BlogHomePage() {
+export default async function BlogHomePage() {
+  const settings = await getSettings()
+
   return (
     <>
       <Container className="mt-10">
@@ -26,7 +29,7 @@ export default function BlogHomePage() {
           </div>
           <aside className="space-y-10 lg:sticky lg:top-8 lg:h-fit lg:pl-16 xl:pl-20">
             <Newsletter />
-            <Resume />
+            {settings.resume && <Resume resume={settings.resume} />}
           </aside>
         </div>
       </Container>

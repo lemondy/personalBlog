@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
     }
 
     if (env.NODE_ENV === 'production' && env.SITE_NOTIFICATION_EMAIL_TO) {
-      await resend.sendEmail({
+      await resend.emails.send({
         from: emailConfig.from,
         to: env.SITE_NOTIFICATION_EMAIL_TO,
         subject: '👋 有人刚刚在留言墙留言了',
@@ -78,14 +78,18 @@ export async function POST(req: NextRequest) {
         }),
       })
     }
-    // mysql not returning insertId
-    await db.insert(guestbook).values(guestbookData).execute();
-    const insertedUser = await db.select().from(guestbook).where(eq(guestbook.userId, user.id));
-    const insertId = insertedUser[0].id;
+
+    const [newGuestbook] = await db
+      .insert(guestbook)
+      .values(guestbookData)
+      .returning({
+        newId: guestbook.id,
+      })
+
     return NextResponse.json(
       {
         ...guestbookData,
-        id: GuestbookHashids.encode(insertId),
+        id: GuestbookHashids.encode(newGuestbook.newId),
         createdAt: new Date(),
       } satisfies GuestbookDto,
       {

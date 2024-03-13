@@ -1,15 +1,8 @@
-import { drizzle } from "drizzle-orm/mysql2";
-import mysql from "mysql2/promise";
+import { Pool } from '@neondatabase/serverless'
+import { drizzle } from 'drizzle-orm/neon-serverless'
 
 import { env } from '~/env.mjs'
 
 // create the connection
-const connection = await mysql.createConnection({
-  host: env.DATABASE_HOST,
-  port: parseInt(env.DATABASE_PORT),
-  user: env.DATABASE_USERNAME,
-  password: env.DATABASE_PASSWORD,
-  database: env.DATABASE_NAME,
-})
-
-export const db = drizzle(connection)
+const pool = new Pool({ connectionString: env.DATABASE_URL })
+export const db = drizzle(pool)
