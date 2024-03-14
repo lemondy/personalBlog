@@ -75,17 +75,6 @@ export function PeekabooLink({
               <motion.div
                 className="pointer-events-none relative z-50 w-[400px] origin-top overflow-hidden !p-0"
                 initial={{
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
                   opacity: 0,
                   scale: 0.965,
                   y: 9,
