@@ -1,5 +1,4 @@
 'use client'
-
 import { clsxm } from '@zolplay/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
@@ -8,11 +7,10 @@ import React from 'react'
 
 import { RichLink } from '~/components/links/RichLink'
 import { HoverCard } from '~/components/ui/HoverCard'
-import { env } from '~/env.mjs'
 import { makeBlurDataURL } from '~/lib/image'
 
 // 改成 false 就可以关闭链接预览快照图了
-const supportsPreview = false
+const supportsPreview = true
 
 type PeekabooLinkProps = LinkProps &
   React.ComponentPropsWithoutRef<'a'> & {
@@ -25,7 +23,6 @@ export function PeekabooLink({
   ...props
 }: PeekabooLinkProps) {
   const [isOpen, setIsOpen] = React.useState(false)
-
   // if it's a relative link, use a fallback Link
   if (!href.startsWith('http')) {
     return (
@@ -35,7 +32,7 @@ export function PeekabooLink({
     )
   }
 
-  if (!env.NEXT_PUBLIC_SITE_LINK_PREVIEW_ENABLED) {
+  if (!supportsPreview) {
     return (
       <RichLink
         href={href}
@@ -50,11 +47,9 @@ export function PeekabooLink({
       </RichLink>
     )
   }
-
   function onOpenChange(open: boolean) {
     setIsOpen(open)
   }
-
   return (
     <HoverCard.Root openDelay={0} closeDelay={50} onOpenChange={onOpenChange}>
       <HoverCard.Trigger asChild>
@@ -73,10 +68,24 @@ export function PeekabooLink({
       <AnimatePresence mode="wait">
         {isOpen && (
           <HoverCard.Portal forceMount>
-            <HoverCard.Content asChild collisionPadding={250}>
+            <HoverCard.Content
+              asChild
+              collisionPadding={250}
+            >
               <motion.div
                 className="pointer-events-none relative z-50 w-[400px] origin-top overflow-hidden !p-0"
                 initial={{
+
+    
+          
+            
+    
+
+          
+          Expand Down
+    
+    
+  
                   opacity: 0,
                   scale: 0.965,
                   y: 9,
