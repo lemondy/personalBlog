@@ -3,14 +3,14 @@ import React from 'react'
 import { BlogPosts } from '~/app/(main)/blog/BlogPosts'
 import { Headline } from '~/app/(main)/Headline'
 import { Newsletter } from '~/app/(main)/Newsletter'
-import { Photos } from '~/app/(main)/Photos'
+// import { Photos } from '~/app/(main)/Photos'
 import { Resume } from '~/app/(main)/Resume'
 import { PencilSwooshIcon } from '~/assets'
 import { Container } from '~/components/ui/Container'
-import { getSettings } from '~/sanity/queries'
+// import { getSettings } from '~/sanity/queries'
 
 export default async function BlogHomePage() {
-  const settings = await getSettings()
+  // const settings = await getSettings()
 
   return (
     <>
