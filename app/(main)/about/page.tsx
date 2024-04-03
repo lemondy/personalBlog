@@ -23,8 +23,9 @@ export default function AboutPage() {
         <h2>教育经历</h2>
         <li>
           <b>硕士(Master Degree)</b>：北京理工大学计算机学院(Beijing Institute of Technology)，软件工程专业，2014.9～2017.7
-          <b>本科(Bachelor degree)</b>：武汉纺织大学计算机学院(Wuhan Textile University)，软件工程，2010.9～2014.7
-          
+        </li>
+        <li>
+        <b>本科(Bachelor degree)</b>：武汉纺织大学计算机学院(Wuhan Textile University)，软件工程，2010.9～2014.7
         </li>
 
         <h2>工作经历</h2>
