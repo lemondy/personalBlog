@@ -2,10 +2,9 @@ import Balancer from 'react-wrap-balancer'
 import { Container } from '~/components/ui/Container'
 import { RichLink } from '~/components/links/RichLink'
 
-const title = '关于lemondy'
+// const title = '关于lemondy'
 const description =
   'lemondy 提供一对一的咨询服务（Ask Me Anything）。我有后端开发、机器学习、数据挖掘、大数据处理、用户增长策略、用户画像、内容创作等经验，可以为你解答相关的问题。'
-
 
 export default function AboutPage() {
   return (
