@@ -84,6 +84,16 @@ export default function AboutPage() {
           </li>
         </ul>
 
+        <p>账户打通IDMapping</p>
+        <ul>
+          <li>
+            <strong>账户规则打通</strong>
+          </li>
+          <li>
+            <strong>账户模型策略打通</strong>
+          </li>
+        </ul>          
+
         <h2>技能清单</h2>
         <p>
           编程语言：
