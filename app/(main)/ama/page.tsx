@@ -1,14 +1,14 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import Balancer from 'react-wrap-balancer'
 
 import { RichLink } from '~/components/links/RichLink'
 import { Container } from '~/components/ui/Container'
 
-import AlipayQR from './alipay-qr.jpg'
-import ThankYouLetterScreenshot1 from './Arc aagD26w9@2x.png'
-import ThankYouLetterScreenshot2 from './Arc ynleUdHy@2x.png'
+// import AlipayQR from './alipay-qr.jpg'
+// import ThankYouLetterScreenshot1 from './Arc aagD26w9@2x.png'
+// import ThankYouLetterScreenshot2 from './Arc ynleUdHy@2x.png'
 
-const title = 'AMA 一对一咨询'
+const title = '关于lemondy'
 const description =
   'lemondy 提供一对一的咨询服务（Ask Me Anything）。我有后端开发、机器学习、数据挖掘、大数据处理、用户增长策略、用户画像、内容创作等经验，可以为你解答相关的问题。'
 
@@ -31,7 +31,7 @@ export default function AskMeAnythingPage() {
     <Container className="mt-16 sm:mt-24">
       <header className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          Ask Me Anything / 一对一咨询
+          About lemondy / 关于lemondy
         </h1>
         <p className="my-6 text-base text-zinc-600 dark:text-zinc-400">
           <Balancer>{description}</Balancer>
@@ -39,7 +39,14 @@ export default function AskMeAnythingPage() {
       </header>
 
       <article className="prose dark:prose-invert">
-        <h2>咨询内容</h2>
+        <h2>教育经历</h2>
+        <li>
+          <b>硕士(Master's Degree)</b>：北京理工大学计算机学院(Beijing Institute of Technology)，软件工程专业，2014.9～2017.7
+          <b>本科(Bachelor's degree)</b>：武汉纺织大学计算机学院(Wuhan Textile University)，软件工程，2010.9～2014.7
+          
+        </li>
+
+        <h2>工作经历</h2>
         <p>我可以为你解答以下相关的问题：</p>
         <ul>
           <li>
@@ -79,7 +86,7 @@ export default function AskMeAnythingPage() {
           你也可以全程跟我用英语聊，我也非常乐意，因为可能我的英语比中文说的要好。。。
         </p>
 
-        <h2>定价</h2>
+        <h2>项目经历</h2>
         <p>我的一对一咨询的价格为：</p>
         <ul>
           <li>
@@ -90,39 +97,10 @@ export default function AskMeAnythingPage() {
           </li>
         </ul>
 
-        <p className="flex justify-center md:block md:justify-start">
-          <span className="inline-flex flex-col items-center">
-            <Image src={AlipayQR} alt="" className="w-44 dark:brightness-90" />
-            <span className="mt-1 text-sm font-medium">支付宝二维码</span>
-          </span>
-        </p>
-        <p>
-          一旦你完成支付，通过{' '}
-          <RichLink
-            href="https://cal.com/calicastle/ask-me-anything"
-            target="_blank"
-          >
-            这个链接
-          </RichLink>
-          来跟我预约一个合适你的时间。
-        </p>
-
-        <h2>感谢信</h2>
+        <h2>技能清单</h2>
         <p>
           下面两个截图摘选自两名 Twitter
           朋友的私信，能够帮助到更多的人一直是我的使命：
-        </p>
-        <p className="grid items-center gap-4 lg:grid-cols-2">
-          <Image
-            src={ThankYouLetterScreenshot1}
-            alt=""
-            className="max-w-full"
-          />
-          <Image
-            src={ThankYouLetterScreenshot2}
-            alt=""
-            className="max-w-full"
-          />
         </p>
       </article>
     </Container>
