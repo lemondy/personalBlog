@@ -1,6 +1,7 @@
 import Balancer from 'react-wrap-balancer'
-import { Container } from '~/components/ui/Container'
+
 import { RichLink } from '~/components/links/RichLink'
+import { Container } from '~/components/ui/Container'
 
 // const title = '关于lemondy'
 const description =
