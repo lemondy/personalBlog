@@ -29,61 +29,73 @@ export default function AboutPage() {
         </li>
 
         <h2>工作经历</h2>
-        <p>我可以为你解答以下相关的问题：</p>
+        <p>我这几年：</p>
         <ul>
           <li>
-            <b>前端/全栈开发</b>
-            ：工作难找，或是寻求职场建议？想提升自己的工程师水平？还是想锐评
-            React vs Vue？
+            <b>阅文集团</b> - 数据挖掘工程师 - 2020.10～至今
+            ：主要负责用户画像标签的挖掘、用户增长策略、内容推荐等工作。
           </li>
           <li>
-            <b>UI/UX 设计</b>：不知道如何开始学习设计？想提升自己的设计水平？
+            <b>字节跳动</b>：承担过数据分析师、用户增长算法工程师、服务端开发等工作。
           </li>
           <li>
-            <b>创业经验</b>
-            ：我是
-            <RichLink href="https://zolplay.com" target="_blank">
-              佐玩
-            </RichLink>
-            的创始人，现在带领着团队帮助游戏开发者打造协同平台。
+            <b>百度</b>
+            ：主要是大数据开发和服务端开发。 
           </li>
-          <li>
-            <b>英语技能</b>：英语能力不足，想提高自己的英语水平？想跟 Cali
-            一样可以{' '}
-            <RichLink
-              href="https://y.qq.com/n/ryqq/songDetail/003c0O9B3firAU"
-              favicon={false}
-              target="_blank"
-            >
-              英文说唱
-            </RichLink>
-            ？
-          </li>
-          <li>
-            <b>其他</b>
-            ：我的美国留学与工作经验，内容创作，音乐制作经验等等都可以帮助你解答一些其他的问题。
-          </li>
+        
         </ul>
-        <p>
-          你也可以全程跟我用英语聊，我也非常乐意，因为可能我的英语比中文说的要好。。。
-        </p>
 
         <h2>项目经历</h2>
-        <p>我的一对一咨询的价格为：</p>
+        <p>个性化push策略：</p>
         <ul>
           <li>
-            <strong>¥150 - 30分钟</strong>
+            <strong>人书召回</strong>
           </li>
           <li>
-            <strong>¥300 - 60分钟</strong>
+            <strong>文案个性化模型</strong>
+          </li>
+        </ul>
+        <p>新用户LTV预估：</p>
+        <ul>
+          <li>
+            <strong>LTV计算公式</strong>
+          </li>
+          <li>
+            <strong>预估模型</strong>
+          </li>
+        </ul>
+
+        <p>老用户流失预测：</p>
+        <ul>
+          <li>
+            <strong>流失预测模型</strong>
+          </li>
+          <li>
+            <strong>流失原因分析</strong>
+          </li>
+        </ul>
+
+        <p>用户画像标签挖掘：</p>
+        <ul>
+          <li>
+            <strong>标签挖掘模型</strong>
+          </li>
+          <li>
+            <strong>标签使用策略</strong>
           </li>
         </ul>
 
         <h2>技能清单</h2>
         <p>
-          下面两个截图摘选自两名 Twitter
-          朋友的私信，能够帮助到更多的人一直是我的使命：
+          编程语言：
         </p>
+        <ul>
+          <li>
+            <strong>Python、Java、C++、Go、Shell</strong>
+          </li>
+         
+        </ul>
+
       </article>
     </Container>
   )
