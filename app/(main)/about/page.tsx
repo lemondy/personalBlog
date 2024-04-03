@@ -96,13 +96,18 @@ export default function AboutPage() {
 
         <h2>技能清单</h2>
         <p>
-          编程语言：
+          
         </p>
         <ul>
           <li>
-            <strong>Python、Java、C++、Go、Shell</strong>
+          <b>编程语言：</b><strong>Python、Java、C++、Go、Shell</strong>
           </li>
-         
+          <li>
+            <b>大数据处理：</b><strong>SQL、Hive、Spark、MapReduce、PySpark</strong>
+          </li>
+          <li>
+            <b>机器学习：</b><strong>Tensorflow、Keras、PyTorch、Scikit-learn、聚类算法、XGBoost、Lightgbm、DeepFm</strong>
+         </li>  
         </ul>
 
       </article>
