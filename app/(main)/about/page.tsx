@@ -147,7 +147,7 @@ export default function AboutPage() {
         <ul>
           <li>
             <b>专利：</b>
-            <RichLink href="http://epub.cnipa.gov.cn/Sw/SwDetail" target="_blank">
+            <RichLink href="https://aiqicha.baidu.com/patent/info?referId=f35802485b8d47d0998a76338af33caccdda1b5e&pid=28783255028393" target="_blank">
             用户标识关联查询方法、装置、设备及可读存储介质
               </RichLink>
           </li>
