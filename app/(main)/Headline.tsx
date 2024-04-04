@@ -96,30 +96,30 @@ export function Headline() {
         }}
       >
         <SocialLink
-          href="https://lemondy.org/twitter"
+          href="https://twitter.com/yunlemon238081"
           aria-label="我的推特"
           platform="twitter"
         />
         <SocialLink
-          href="https://lemondy.org/youtube"
+          href="https://www.youtube.com/@lemoncloud7301"
           aria-label="我的 YouTube"
           platform="youtube"
         />
         <SocialLink
-          href="https://lemondy.org/bilibili"
+          href="https://space.bilibili.com/14175936"
           aria-label="我的 Bilibili"
           platform="bilibili"
         />
         <SocialLink
-          href="https://lemondy.org/github"
+          href="https://github.com/lemondy/"
           aria-label="我的 GitHub"
           platform="github"
         />
-        <SocialLink
+        {/* <SocialLink
           href="https://lemondy.org/tg"
           aria-label="我的 Telegram"
           platform="telegram"
-        />
+        /> */}
         <SocialLink href="/feed.xml" platform="rss" aria-label="RSS 订阅" />
         <SocialLink
           href="mailto:hi@lemondy.org"
