@@ -1,4 +1,5 @@
 import Balancer from 'react-wrap-balancer'
+import { RichLink } from '~/components/links/RichLink'
 
 import { Container } from '~/components/ui/Container'
 
@@ -25,6 +26,9 @@ export default function AboutPage() {
         </li>
         <li>
         <b>本科(Bachelor degree)</b>：武汉纺织大学计算机学院(Wuhan Textile University)，软件工程，2010.9～2014.7
+        </li>
+        <li>  
+        <b>通过英语CET4/6考试</b> 
         </li>
 
         <h2>工作经历</h2>
@@ -74,11 +78,27 @@ export default function AboutPage() {
           </li>
         </ul>
 
+        <p>用户运营增长：</p>
+        <ul>
+          <li>
+            <strong>用户生命周期</strong>
+          </li>
+          <li>
+            <strong>用户价格敏感度</strong>
+          </li>
+          <li>
+            <strong>营销uplift模型</strong>
+          </li>
+        </ul>
+
         <p>用户画像标签挖掘：</p>
         <ul>
           <li>
-            <strong>标签挖掘模型</strong>
+            <strong>用户长短期兴趣</strong>
           </li>
+          <li>
+            <strong>用户兴趣转移</strong>
+          </li> 
           <li>
             <strong>标签使用策略</strong>
           </li>
@@ -91,6 +111,9 @@ export default function AboutPage() {
           </li>
           <li>
             <strong>账户模型策略打通</strong>
+          </li>
+          <li>
+            <strong>在线服务</strong>
           </li>
         </ul>          
 
@@ -108,6 +131,16 @@ export default function AboutPage() {
           <li>
             <b>机器学习：</b><strong>Tensorflow、Keras、PyTorch、Scikit-learn、聚类算法、XGBoost、Lightgbm、DeepFm</strong>
          </li>  
+        </ul>
+
+        <h2>其他</h2>
+        <ul>
+          <li>
+            <b>专利：</b>
+            <RichLink href="http://epub.cnipa.gov.cn/Sw/SwDetail" target="_blank">
+            用户标识关联查询方法、装置、设备及可读存储介质
+              </RichLink>
+          </li>
         </ul>
 
       </article>
