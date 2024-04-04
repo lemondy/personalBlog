@@ -115,7 +115,17 @@ export default function AboutPage() {
           <li>
             <strong>在线服务</strong>
           </li>
-        </ul>          
+        </ul>      
+
+        <p>有声小说字幕识别（ASR）</p>    
+        <ul>
+          <li>
+            <strong>字幕识别模型</strong>
+          </li>
+          <li>
+            <strong>字幕识别策略</strong>
+          </li>
+        </ul>
 
         <h2>技能清单</h2>
         <p>
@@ -126,7 +136,7 @@ export default function AboutPage() {
           <b>编程语言：</b><strong>Python、Java、C++、Go、Shell</strong>
           </li>
           <li>
-            <b>大数据处理：</b><strong>SQL、Hive、Spark、MapReduce、PySpark</strong>
+            <b>大数据处理：</b><strong>SQL、Hive、Spark、MapReduce、PySpark、hadoop</strong>
           </li>
           <li>
             <b>机器学习：</b><strong>Tensorflow、Keras、PyTorch、Scikit-learn、聚类算法、XGBoost、Lightgbm、DeepFm</strong>
