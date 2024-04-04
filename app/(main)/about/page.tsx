@@ -49,7 +49,7 @@ export default function AboutPage() {
         </ul>
 
         <h2>项目经历</h2>
-        <p>个性化push策略：</p>
+        <p><b>个性化push策略：</b></p>
         <ul>
           <li>
             <strong>人书召回</strong>
@@ -58,7 +58,7 @@ export default function AboutPage() {
             <strong>文案个性化模型</strong>
           </li>
         </ul>
-        <p>新用户LTV预估：</p>
+        <p><b>新用户LTV预估：</b></p>
         <ul>
           <li>
             <strong>LTV计算公式</strong>
@@ -68,7 +68,7 @@ export default function AboutPage() {
           </li>
         </ul>
 
-        <p>老用户流失预测：</p>
+        <p><b>老用户流失预测：</b></p>
         <ul>
           <li>
             <strong>流失预测模型</strong>
@@ -78,7 +78,7 @@ export default function AboutPage() {
           </li>
         </ul>
 
-        <p>用户运营增长：</p>
+        <p><b>用户运营增长：</b></p>
         <ul>
           <li>
             <strong>用户生命周期</strong>
@@ -91,7 +91,7 @@ export default function AboutPage() {
           </li>
         </ul>
 
-        <p>用户画像标签挖掘：</p>
+        <p><b>用户画像标签挖掘：</b></p>
         <ul>
           <li>
             <strong>用户长短期兴趣</strong>
@@ -104,7 +104,7 @@ export default function AboutPage() {
           </li>
         </ul>
 
-        <p>账户打通IDMapping</p>
+        <p><b>账户打通IDMapping</b></p>
         <ul>
           <li>
             <strong>账户规则打通</strong>
@@ -117,7 +117,7 @@ export default function AboutPage() {
           </li>
         </ul>      
 
-        <p>有声小说字幕识别（ASR）</p>    
+        <p><b>有声小说字幕识别（ASR）</b></p>    
         <ul>
           <li>
             <strong>字幕识别模型</strong>
