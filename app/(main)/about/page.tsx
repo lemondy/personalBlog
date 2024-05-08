@@ -62,7 +62,7 @@ export default function AboutPage() {
 
           </li>
           <li>
-            <strong>人书召回:类似推荐系统，关键点是匹配用户最感兴趣的书籍</strong>
+            <strong>人书召回:类似推荐系统，关键点是匹配用户最感兴趣的书籍，</strong>
             书籍匹配策略迭代了2个版本：
             <ul>
               <li>
@@ -108,6 +108,13 @@ export default function AboutPage() {
         <ul>
           <li>
             <strong>流失预测模型</strong>
+            <ul>
+              <li>用户流失口径定义</li>
+              <li>特征工程</li>
+              <li>模型选择</li>
+              <li>模型评估</li> 
+              <li>模型上线</li>
+            </ul>
           </li>
           <li>
             <strong>流失原因分析</strong>
@@ -118,12 +125,22 @@ export default function AboutPage() {
         <ul>
           <li>
             <strong>用户生命周期</strong>
+            <ul>
+              <li>用户分层</li>
+              <li>用户生命周期定义</li>
+              <li>用户生命周期策略</li>
+            </ul>
           </li>
           <li>
             <strong>用户价格敏感度</strong>
           </li>
           <li>
             <strong>营销uplift模型</strong>
+            <ul>
+              <li>营销策略</li>
+              <li>营销模型</li>
+              <li>营销效果评估</li>
+            </ul>
           </li>
           <li>
             <strong>红包/金币激励策略</strong>
