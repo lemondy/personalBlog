@@ -55,11 +55,11 @@ export default function AboutPage() {
             <strong>推送时机：</strong>
             推送时间的策略经过3个版本迭代：
             <ul>
-              <li><b>第一版：</b>根据app活跃峰值时间点确定推送时间，和产品一起确定早上7点、上午10点、晚上19点三个固定的推送时间点；</li>
+              <li><b>第一版：</b>根据App活跃峰值时间点确定推送时间，和产品一起确定早上7点、上午10点、晚上19点三个固定的推送时间点；</li>
               <li><b>第二版：</b>根据用户在App内过去30天活跃数据，建设粗略版本用户常活跃时间段，然后在用户常活跃时间前半个小时进行推送；</li>
               <li><b>第三版：</b>根据腾讯系设备活跃实时信号，消费实时kafka设备活跃数据，实时推送；</li>
             </ul>
-            
+
           </li>
           <li>
             <strong>人书召回:类似推荐系统，关键点是匹配用户最感兴趣的书籍</strong>
@@ -76,7 +76,22 @@ export default function AboutPage() {
             </ul>
           </li>
           <li>
-            <strong>文案个性化模型</strong>
+            <strong>文案点击预估模型：预估用户对每条候选文案的点击率</strong>
+            文案点击率模型构建步骤：
+            <ul>
+              <li>
+                <b>特征工程：</b>
+                用户画像特征、用户行为特征、文案特征；
+              </li>
+              <li>
+                <b>模型选择：</b>
+               Lightgbm建模，二分类问题、CTR预估；
+              </li>
+              <li>
+                <b>模型评估：</b>
+                AUC、F1、Precision、Recall；
+              </li>
+            </ul>
           </li>
         </ul>
         <p><b>新用户LTV预估：</b></p>
@@ -109,6 +124,9 @@ export default function AboutPage() {
           </li>
           <li>
             <strong>营销uplift模型</strong>
+          </li>
+          <li>
+            <strong>红包/金币激励策略</strong>
           </li>
         </ul>
 
