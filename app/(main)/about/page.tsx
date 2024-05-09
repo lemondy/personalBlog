@@ -81,7 +81,7 @@ export default function AboutPage() {
             <ul>
               <li>
                 <b>特征工程：</b>
-                用户画像特征、用户行为特征、文案特征；
+                抽取用户画像特征、用户行为特征、文案特征；
               </li>
               <li>
                 <b>模型选择：</b>
@@ -101,6 +101,12 @@ export default function AboutPage() {
           </li>
           <li>
             <strong>预估模型</strong>
+            <ul>
+              <li>特征工程</li>
+              <li>模型选择：lightgbm、深度学习、MOE多目标尝试</li>
+              <li>模型评估</li>
+              <li>模型上线</li>
+            </ul>
           </li>
         </ul>
 
@@ -117,7 +123,11 @@ export default function AboutPage() {
             </ul>
           </li>
           <li>
-            <strong>流失原因分析</strong>
+            <strong>流失原因分析：通过分析用户流失原因，针对性的制定端内优化策略，降低用户流失率；</strong>
+            <ul>
+              <li>流失原因分析</li>
+              <li>流失原因解决方案</li>
+            </ul>
           </li>
         </ul>
 
@@ -150,7 +160,7 @@ export default function AboutPage() {
         <p><b>用户画像标签挖掘：</b></p>
         <ul>
           <li>
-            <strong>用户长短期兴趣</strong>
+            <strong>用户长短期兴趣：长期一般是指3个月的兴趣；短期一般是近2天；</strong>
           </li>
           <li>
             <strong>用户兴趣转移</strong>
@@ -164,12 +174,21 @@ export default function AboutPage() {
         <ul>
           <li>
             <strong>账户规则打通</strong>
+            <ul>
+              <li>技术点：mapreduce、hive sql、hadoop、连通图</li>
+              <li>主要逻辑：通过一条日志里面出现的多个id对，构建ID之间关系边，多个ID之间通过边形成图</li>
+              <li></li>
+            </ul>
           </li>
           <li>
             <strong>账户模型策略打通</strong>
           </li>
           <li>
             <strong>在线服务</strong>
+            <ul>
+              <li>技术点：C++、Brpc服务、高性能</li>
+              <li></li>
+            </ul>
           </li>
         </ul>      
 
@@ -177,9 +196,17 @@ export default function AboutPage() {
         <ul>
           <li>
             <strong>字幕识别模型</strong>
+            <ul>
+              <li>前期方案调研:对比了B站自动生成的字幕、飞书妙记、叮叮、讯飞、百度PaddleSpeech 语音转文本能力</li>
+              <li>模型选择：whisper large-v2</li>
+            </ul>
           </li>
           <li>
-            <strong>字幕识别策略</strong>
+            <strong>落地项目</strong>
+            <ul>
+              <li>广告片段识别</li>
+              <li>有声书字幕</li>
+            </ul>
           </li>
         </ul>
 
