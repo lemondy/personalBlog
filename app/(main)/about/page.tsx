@@ -165,9 +165,6 @@ export default function AboutPage() {
           <li>
             <strong>用户兴趣转移</strong>
           </li> 
-          <li>
-            <strong>标签使用策略</strong>
-          </li>
         </ul>
 
         <p><b>账户打通IDMapping</b></p>
