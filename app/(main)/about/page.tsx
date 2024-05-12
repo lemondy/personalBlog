@@ -5,7 +5,7 @@ import { Container } from '~/components/ui/Container'
 
 // const title = '关于lemondy'
 const description =
-  'lemondy 提供一对一的咨询服务（Ask Me Anything）。我有后端开发、机器学习、数据挖掘、大数据处理、用户增长策略、用户画像、内容创作等经验，可以为你解答相关的问题。'
+  '我有后端开发、机器学习、数据挖掘、大数据处理、用户增长策略、用户画像、内容创作等经验，可以为你解答相关的问题。'
 
 export default function AboutPage() {
   return (
@@ -100,10 +100,10 @@ export default function AboutPage() {
             <strong>LTV计算公式</strong>
           </li>
           <li>
-            <strong>预估模型</strong>
+            <strong>实现步骤</strong>
             <ul>
               <li>特征工程</li>
-              <li>模型选择：lightgbm、深度学习、MOE多目标尝试</li>
+              <li>模型选择：幂函数拟合、lightgbm、深度学习、MOE多目标尝试</li>
               <li>模型评估</li>
               <li>模型上线</li>
             </ul>
@@ -173,21 +173,26 @@ export default function AboutPage() {
         <p><b>账户打通IDMapping</b></p>
         <ul>
           <li>
-            <strong>账户规则打通</strong>
+            <strong>账户规则打通：通过规则将各种ID（设备ID、账号ID、cookieid等）归属到同一个自然人。</strong>
             <ul>
               <li>技术点：mapreduce、hive sql、hadoop、连通图</li>
-              <li>主要逻辑：通过一条日志里面出现的多个id对，构建ID之间关系边，多个ID之间通过边形成图</li>
-              <li></li>
+              <li>主要逻辑：通过一条日志里面出现的多个id对，构建ID之间关系边，多个ID之间通过边形成图，然后通过连通图将整体划分出一个个子图；</li>
+              <li>主要难点：数据量级大、数据脏（格式不统一、异常数据、作弊/刷子数据等）</li>
             </ul>
           </li>
           <li>
-            <strong>账户模型策略打通</strong>
+            <strong>账户模型策略打通：通过算法模型，预测多个设备维度是否是同一个自然人。</strong>
+            <ul>
+              <li>粗分桶</li>
+              <li>精分桶</li>
+              <li>模型打通/预测</li>
+            </ul>
           </li>
           <li>
             <strong>在线服务</strong>
             <ul>
               <li>技术点：C++、Brpc服务、高性能</li>
-              <li></li>
+              <li>主要逻辑：离线构建正反向关联关系，将映射关系导入在线kv存储，在线服务支持同一个自然人任意ID之间打通查询；</li>
             </ul>
           </li>
         </ul>      
@@ -198,22 +203,21 @@ export default function AboutPage() {
             <strong>字幕识别模型</strong>
             <ul>
               <li>前期方案调研:对比了B站自动生成的字幕、飞书妙记、叮叮、讯飞、百度PaddleSpeech 语音转文本能力</li>
-              <li>模型选择：whisper large-v2</li>
+              <li>模型选择：fast-whisper(large-v2)</li>
             </ul>
           </li>
           <li>
             <strong>落地项目</strong>
             <ul>
-              <li>广告片段识别</li>
-              <li>有声书字幕</li>
+              <li>广告片段识别：主要针对有声书前两分钟和后两分钟的音频进行广告识别；音频切片后，输入到whisper模型中；</li>
+              <li>有声书字幕：
+                主要经过步骤：asr模型字幕识别、音频字幕匹配原文修正、修正书名、作者名、主播名、关键字等、广告识别、标点符号增加；</li>
             </ul>
           </li>
         </ul>
 
         <h2>技能清单</h2>
-        <p>
-          
-        </p>
+
         <ul>
           <li>
           <b>编程语言：</b><strong>Python、Java、C++、Go、Shell</strong>
