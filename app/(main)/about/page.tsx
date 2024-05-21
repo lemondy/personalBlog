@@ -102,9 +102,14 @@ export default function AboutPage() {
           <li>
             <strong>实现步骤</strong>
             <ul>
-              <li>特征工程</li>
-              <li>模型选择：幂函数拟合、lightgbm、深度学习、MOE多目标尝试</li>
-              <li>模型评估</li>
+              <li>特征工程：抽取渠道来源特征、用户下载app后在端内活跃、阅读时长、付费等行为特征；</li>
+              <li>模型选择：幂函数拟合、lightgbm、深度学习、MOE多目标尝试；</li>
+              <li>模型评估：主要是用MAPE评估预估偏差；
+                <li>ltv1:使用D0一天数据预估，测试集MAPE：10%；</li>
+                <li>ltv3:使用D0、D1两天数据，测试集MAPE：8.6%</li>
+                <li>ltv7:使用D0、D1、D2三天数据，测试集MAPE：8.8%</li>
+                <li>ltv30:使用D0～D6 七天数据，测试集MAPE：10.9%</li>
+              </li>
               <li>模型上线</li>
             </ul>
           </li>
