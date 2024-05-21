@@ -174,7 +174,9 @@ export default function AboutPage() {
             </ul>
           </li>
           <li>
-            <strong>红包/金币激励策略</strong>
+            <strong>红包/金币激励策略:</strong>
+            金币激励策略通常能显著的拉新新用户、促进用户活跃、延长用户留存/活跃时间；但是红包/金币发出去的是真实成本，需要保持这个事项的ROI大于1才可以保证业务形态的可持续发展；
+
           </li>
         </ul>
 
@@ -222,6 +224,7 @@ export default function AboutPage() {
             <ul>
               <li>前期方案调研:对比了B站自动生成的字幕、飞书妙记、叮叮、讯飞、百度PaddleSpeech 语音转文本能力</li>
               <li>模型选择：fast-whisper(large-v2)</li>
+              <li>模型效果：通过asr转录、人名修正/关键词修正、小说原文关联修正、幻听修正等操作，最后转录的WER在4%以内；</li>
             </ul>
           </li>
           <li>
