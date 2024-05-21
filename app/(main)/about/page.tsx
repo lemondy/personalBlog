@@ -130,7 +130,7 @@ export default function AboutPage() {
                 <b>模型选择:</b>
                 基于模型预测效果、模型复杂度、模型的可解释性等维度选择使用lightgbm模型；
                 <li>
-                  <b>模型调优：</b>
+                  模型调优：
                   对于树模型，主要调优参数包括：树的棵树、树的深度、叶子节点数、学习率、正则化参数等；
                   这些参数一般可以通过网格搜索、贝叶斯优化等方式进行调优；
                 </li>
@@ -182,6 +182,8 @@ export default function AboutPage() {
 
         <p><b>用户画像标签挖掘：</b></p>
         <ul>
+          <li><strong>用户书籍评分表偏好</strong>
+          </li>
           <li>
             <strong>用户长短期兴趣：长期一般是指3个月的兴趣；短期一般是近2天；</strong>
           </li>
@@ -203,9 +205,9 @@ export default function AboutPage() {
           <li>
             <strong>账户模型策略打通：通过算法模型，预测多个设备维度是否是同一个自然人。</strong>
             <ul>
-              <li>粗分桶</li>
-              <li>精分桶</li>
-              <li>模型打通/预测</li>
+              <li>IP粗分桶：建设设备近期常使用的IP，然后将使用相同IP的设备分到同一个桶，在同一个桶内预测任意两个设备是否是同一个自然人；</li>
+              <li>精分桶：使用lr预估；</li>
+              <li>模型打通/预测：dnn；</li>
             </ul>
           </li>
           <li>
