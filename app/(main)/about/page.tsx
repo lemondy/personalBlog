@@ -5,7 +5,7 @@ import { Container } from '~/components/ui/Container'
 
 // const title = '关于lemondy'
 const description =
-  '我有后端开发、机器学习、数据挖掘、大数据处理、用户增长策略、用户画像、内容创作等经验，可以为你解答相关的问题。'
+  '我有后端开发、机器学习、数据挖掘、大数据处理、用户增长策略、用户画像、用户个性化推荐、内容创作等经验，可以为你解答相关的问题。'
 
 export default function AboutPage() {
   return (
@@ -127,15 +127,13 @@ export default function AboutPage() {
                 <li>变化趋势类：加工用户行为变化率类特征，如前后两周活跃天数变化率、阅读时长变化率、付费金额/频次变化率；</li>
               </li>
               <li>
-                <li><b>模型选择:</b>
+                <b>模型选择:</b>
                 基于模型预测效果、模型复杂度、模型的可解释性等维度选择使用lightgbm模型；
-                </li>
                 <li>
                   <b>模型调优：</b>
                   对于树模型，主要调优参数包括：树的棵树、树的深度、叶子节点数、学习率、正则化参数等；
                   这些参数一般可以通过网格搜索、贝叶斯优化等方式进行调优；
                 </li>
-                
               </li>
               <li>
                 <b>模型评估：</b>
@@ -166,9 +164,6 @@ export default function AboutPage() {
               <li>用户生命周期定义</li>
               <li>用户生命周期策略</li>
             </ul>
-          </li>
-          <li>
-            <strong>用户价格敏感度</strong>
           </li>
           <li>
             <strong>营销uplift模型</strong>
@@ -212,10 +207,10 @@ export default function AboutPage() {
             </ul>
           </li>
           <li>
-            <strong>在线服务</strong>
+            <strong>ID在线打通查询服务</strong>
             <ul>
               <li>技术点：C++、Brpc服务、高性能</li>
-              <li>主要逻辑：离线构建正反向关联关系，将映射关系导入在线kv存储，在线服务支持同一个自然人任意ID之间打通查询；</li>
+              <li>主要逻辑：离线构建ID与自然人正反向关联关系，将映射关系导入在线kv存储，在线服务支持同一个自然人任意ID之间打通查询；</li>
             </ul>
           </li>
         </ul>      
