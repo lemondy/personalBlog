@@ -102,7 +102,7 @@ export default function AboutPage() {
           <li>
             <strong>实现步骤</strong>
             <ul>
-              <li>特征工程：抽取渠道来源特征、用户下载app后在端内活跃、阅读时长、付费等行为特征；</li>
+              <li>特征工程：抽取渠道来源特征、渠道拉新素材特征、用户下载app后在端内活跃、阅读时长、付费等行为特征；</li>
               <li>模型选择：幂函数拟合、lightgbm、深度学习、MOE多目标尝试；</li>
               <li>模型评估：主要是用MAPE评估预估偏差；
                 <li>ltv1:使用D0一天数据预估，测试集MAPE：10%；</li>
